@@ -15,4 +15,6 @@
 - 使用 `jar tvf` 命令查看 jar 里面的内容；
 - `target` 中的xxx.jar.origin 即为 Maven 所创建的原始 jar 文件；
   > Spring Boot 的每一次发行都会基于一个 Spring Framework 版本，因此我们**强烈**建议您不要指定指定它的版本。
-- 
+- 如果不想使用`spring-boot-starter-parent`,可以通过使用 `scope=import` 依赖来获得依赖管理（但不是插件管理）；
+- Starter 是一组惯例依赖描述资源，可以包含在应用中；
+- Starter 包含了许多需要用于使项目快速启动和运行，并且需要一组受支持的可传递依赖关系的依赖；
