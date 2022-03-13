@@ -18,3 +18,7 @@
 - 如果不想使用`spring-boot-starter-parent`,可以通过使用 `scope=import` 依赖来获得依赖管理（但不是插件管理）；
 - Starter 是一组惯例依赖描述资源，可以包含在应用中；
 - Starter 包含了许多需要用于使项目快速启动和运行，并且需要一组受支持的可传递依赖关系的依赖；
+- 当一个类不声明 `package` 时，会被认为在 **default** 包中，通常不鼓励这样使用，对于使用 `@ComponentScan`、`@EntityScan` 或者 `@SpringBootApplication` 注解的 Spring Boot 应用，这样可能会导致特殊问题发生，因为每一个 jar 中的每一个类将会被读取到；
+- 主应用类，通常会将主应用类放在根包中， `@EnableAutoConfiguration` 通常放在主类上，隐式的定义了某些项目的 **包搜索** 基准起点；
+- 如果主类在根包中也可以使用 `@SpringbootApplication` 注解；
+- 
